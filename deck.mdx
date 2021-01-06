@@ -1,0 +1,190 @@
+import CustomFooter from "./components/Footer";
+
+<Head>
+  <title>The State of Frontend</title>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@dillonerhardt" />
+  <meta name="twitter:title" content="The State of Frontend" />
+  <meta
+    name="og:description"
+    content="How to do state management for modern frontend applications"
+  />
+  <meta
+    name="og:image"
+    content="https://og-image.vercel.app/The%20State%20of%20Frontend.png"
+  />
+</Head>
+
+<Footer>
+  <CustomFooter />
+</Footer>
+
+# The State of Frontend
+
+---
+
+## Who am I?
+
+<Steps>
+
+
+- Self-taught developer
+- Previously: Tech Lead at Cognizant
+- Senior UI Architect at IHS Markit
+
+</Steps>
+
+
+<Notes>
+  My name is Dillon Erhardt Leading front end on for the EDM product with the
+  goal of creating a unified customer experience across a range of products.
+</Notes>
+
+---
+
+### What I'm going to talk about?
+
+How we manage state in modern frontend applications and how that can impact the development of your project.
+
+<Notes>
+  This applied to most types of applications. The current JavaScript ecosystem
+  seems to struggle with it more. Caused by the move from server side
+  applications to having more logic on the front end.
+</Notes>
+
+---
+
+### Different types of state
+
+To be able properly manage our state we need to first understand the different types of state in our application.
+
+<Steps>
+
+
+- UI state
+- Navigation state
+- Business state
+
+</Steps>
+
+
+<Notes>
+  For the lack of a better name. Generally speaking This isn't exact this is
+  just the general pattern most web applications will follow.
+</Notes>
+
+---
+
+### UI State
+
+This usually includes state for forms, data fetching and layout.
+
+This type of state will live on the client\*
+
+<Notes></Notes>
+
+---
+
+### Navigation state
+
+Where we keep track of which part of the application the user is on.
+
+This type of state lives in the URL bar\*
+
+<Notes>
+  Basically what's in the URL bar - that's a little simplified. This is a good
+  example of how viewing it seperatly to a state management solution forces
+  developers to not use it for the wrong state.
+</Notes>
+
+---
+
+### Business State
+
+For most applications this makes up the majority of the state.
+
+It also happens to be where we see the most issues.
+
+This type of state will generally live on the backend\*
+
+<Notes>
+  Only talking about frontend in this talk backend can mean a lot of things. You
+  may have noticed the *s that's because there are many exceptions. This will
+  generally live on the server. Those issues arise from the move to more logic
+  living on the client.
+</Notes>
+
+---
+
+### Exceptions
+
+There are times when we need to blur the lines a little bit for performance or architecture reasons.
+
+<Steps>
+
+
+- Applications with heavy front end logic
+- Offline first applications
+- Games
+
+</Steps>
+
+
+<Notes>
+  In these scenarios we may sync the data between to the server or cache
+  locally. You should still aim to keep these seperated.
+</Notes>
+
+---
+
+### State management solutions and their problems
+
+Most projects I see have only one state management solution.
+
+Let's take Redux as an example.
+
+<Notes>
+  Picking Redux as it's the most common and has implementations in multiple
+  languages. This is usually seen as good practice as it avoids multiple sources
+  of truth. Problem is people expect it to work for all types of state.
+</Notes>
+
+---
+
+### How this affects development
+
+The way you manage state in an application has a much wider impact than you would expect.
+
+<Steps>
+
+
+- Story splitting
+- Architecture decisions
+- Team structure
+- Testing
+
+</Steps>
+
+
+<Notes></Notes>
+
+---
+
+### How you can solve this
+
+Tooling is key. Make your developers lives easier.
+
+<Notes>
+  Caching for data is still something to think about. Recent debate on Twitter
+  with Mark Erikson and Tanner Linsley. These can be abstractions on top of a
+  solution like Redux. We like to think that as an application evolves we will
+  improve the core code but usually it is very hard to change, this is
+  especially true for large engineering teams so it's important to get it right
+  early on.
+</Notes>
+
+---
+
+### The End
+
+Time for questions
